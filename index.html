@@ -8,7 +8,7 @@
     <body>
         <header>
             <div class="logo">TEST</div>
-            <nav>
+            <nav id="nav-bar">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">API</a></li>
@@ -16,6 +16,23 @@
                     <li><a href="#">Support</a></li>
                 </ul>
             </nav>
+            <div class="menu-toggle" onclick="openMenu()">
+                <img class="menu-button" src="images/menu.png">
+            </div>
         </header>
     </body>
+
+    <script>
+        var navbarActive = false;
+        function openMenu() {
+            var nav = document.getElementById("nav-bar");
+            if(navbarActive) {
+                navbarActive = false;
+                nav.classList.remove("active");
+            } else {
+                navbarActive = true;
+                nav.classList.add("active");
+            }
+        }
+    </script>
 </html>
